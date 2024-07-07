@@ -19,12 +19,16 @@ const Weather = () => {
       const weatherResponse = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
       );
+      console.log("weatherResponse");
+      console.log(weatherResponse);
 
       setWeather(weatherResponse.data);
 
       const forecastResponse = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
       );
+      console.log("forecastResponse");
+      console.log(forecastResponse);
       setForecast(
         forecastResponse.data.list.filter((_, index) => index % 8 === 0)
       );
