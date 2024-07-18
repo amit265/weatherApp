@@ -6,7 +6,6 @@ function App() {
     <>
       <div className="flex flex-wrap">
         <Weather />
-        <Weather />
 
       </div>
     </>
